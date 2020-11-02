@@ -13,7 +13,7 @@ const map = {
           "fx": 176.083777747024,
           "fy": -665.1641376795345,
           "nodes": [],
-          "category": "reddit",
+          "category": ":relaxed:",
           "color": "rgba(255, 189, 10, 1.0)"
         },
         {
@@ -23,11 +23,11 @@ const map = {
           "fx": 176.083777747024,
           "fy": -625.1641376795345,
           "nodes": [],
-          "category": "github",
+          "category": ":relaxed:",
           "color": "rgba(36, 170, 255, 1.0)"
         }
       ],
-      "category": "wiki"
+      "category": ":relaxed:"
     },
     {
       "text": "help",
@@ -41,7 +41,7 @@ const map = {
           "fx": 291.3247731601375,
           "fy": -546.2370078674815,
           "nodes": [],
-          "category": "github",
+          "category": ":relaxed:",
           "color": "rgba(175, 54, 242, 1.0)"
         },
         {
@@ -50,7 +50,7 @@ const map = {
           "fx": 291.3247731601375,
           "fy": -506.23700786748157,
           "nodes": [],
-          "category": "github",
+          "category": ":relaxed:",
           "color": "rgba(36, 170, 255, 1.0)"
         },
         {
@@ -67,7 +67,7 @@ const map = {
           "fx": 291.3247731601375,
           "fy": -432.23700786748157,
           "nodes": [],
-          "category": "free book",
+          "category": "joy",
           "color": "rgba(34, 205, 224, 1.0)"
         },
         {
@@ -100,7 +100,7 @@ const map = {
           "fx": 291.3247731601375,
           "fy": -290.23700786748157,
           "nodes": [],
-          "category": "article",
+          "category": ":relaxed:",
           "color": "rgba(36, 170, 255, 1.0)"
         }
       ]
@@ -117,7 +117,7 @@ const map = {
           "fx": 617.7839253819375,
           "fy": -245.0539283546699,
           "nodes": [],
-          "category": "article",
+          "category": ":relaxed:",
           "color": "rgba(175, 54, 242, 1.0)"
         },
         {
@@ -126,7 +126,7 @@ const map = {
           "fx": 617.7839253819375,
           "fy": -183.0539283546699,
           "nodes": [],
-          "category": "article",
+          "category": ":relaxed:",
           "color": "rgba(36, 170, 255, 1.0)"
         },
         {
@@ -135,7 +135,7 @@ const map = {
           "fx": 617.7839253819375,
           "fy": -121.05392835466989,
           "nodes": [],
-          "category": "article",
+          "category": ":relaxed:",
           "color": "rgba(255, 189, 10, 1.0)"
         }
       ]
@@ -161,7 +161,7 @@ const map = {
           "fx": 83.4768002282915,
           "fy": -62.57462866512333,
           "nodes": [],
-          "category": "free book",
+          "category": ":relaxed:",
           "color": "rgba(175, 54, 242, 1.0)"
         },
         {
@@ -170,7 +170,7 @@ const map = {
           "fx": 83.4768002282915,
           "fy": -22.574628665123328,
           "nodes": [],
-          "category": "free book",
+          "category": ":relaxed:",
           "color": "rgba(36, 170, 255, 1.0)"
         }
       ]
@@ -181,14 +181,14 @@ const map = {
       "fx": -346.2056231217888,
       "fy": 39.035120728630204,
       "nodes": [],
-      "category": "wiki"
+      "category": ":relaxed:"
     },
     {
       "text": "python libraries  ️",
       "fx": -78.69331502906573,
       "fy": 100.14771605920942,
       "nodes": [],
-      "category": "mindmap"
+      "category": ":relaxed:"
     },
     {
       "text": "pip",

@@ -33,9 +33,12 @@ export default class MindMap extends Component {
     const simulation = forceSimulation()
       .force('link', forceLink().id(node => node.text))
       .force('charge', forceManyBody())
-      .force('collide', forceCollide().radius(100));
+      .force('collide', forceCollide());
 
     this.state = { simulation };
+
+    this.onClickCallback = props.onClick;
+    this.onDragEndCallback = props.onDragEnd;
   }
 
   /* eslint-disable no-param-reassign */
@@ -70,7 +73,13 @@ export default class MindMap extends Component {
         node.fy = null;
       });
 
-    nodes.call(d3Drag(this.state.simulation, svg, nodes));
+    const dragEndCallback = (node) => {
+      if (this.onDragEndCallback !== undefined) {
+        this.onDragEndCallback(node);
+      }
+    };
+
+    nodes.call(d3Drag(this.state.simulation, svg, nodes).on('end', dragEndCallback));
 
     // Tick the simulation 100 times.
     for (let i = 0; i < 100; i += 1) {
@@ -122,6 +131,16 @@ export default class MindMap extends Component {
     svg.attr('viewBox', getViewBox(nodes.data()))
       .call(d3PanZoom(svg))
       .on('dblclick.zoom', null);
+
+    // Add click callback funcion
+    const clickCallback = (node) => {
+      if (this.onClickCallback !== undefined) {
+        this.onClickCallback(node);
+      }
+    };
+
+    svg.selectAll('foreignObject')
+      .on('click', clickCallback);
   }
 
   componentDidMount() {
@@ -143,15 +162,18 @@ export default class MindMap extends Component {
   }
 }
 
-
 MindMap.defaultProps = {
   nodes: [],
   connections: [],
   editable: false,
+  onClick: PropTypes.func,
+  onDragEnd: PropTypes.func,
 };
 
 MindMap.propTypes = {
   nodes: PropTypes.array,
   connections: PropTypes.array,
   editable: PropTypes.bool,
+  onClick: PropTypes.func,
+  onDragEnd: PropTypes.func,
 };

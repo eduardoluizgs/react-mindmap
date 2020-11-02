@@ -1,5 +1,3 @@
-import { categoryToIMG } from '../parser/emojis';
-
 /*
  * Return the HTML representation of a node.
  * The node is an object that has text, url, and category attributes;
@@ -14,8 +12,16 @@ const subnodesToHTML = (subnodes = [], fcolor) => {
 
   return subnodes.map((subnode) => {
     let href = `href="${subnode.url}"`;
-    let emoji = categoryToIMG(subnode.category);
+    let emoji = '';
 
+    // Add emojis from WebFX
+    if (subnode.category !== undefined && subnode.category !== null) {
+      emoji = `<img class="mindmap-emoji" title="${subnode.category.replaceAll(':', '')}" src="https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/${subnode.category.replaceAll(':', '')}.png">`;
+    }
+
+    // If url is not specified remove the emoji and the href attribute,
+    // so that the node isn't clickable, and the user can see that without
+    // having to hover the node.
     if (!subnode.url) {
       href = '';
       emoji = '';
